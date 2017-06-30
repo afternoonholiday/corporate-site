@@ -34,7 +34,7 @@ header{
   }
  
     .sp_navi_li{
-      width: 40px;
+      width: 130px;
       position: absolute;
       top: 50px;
       right: 2%;
@@ -161,6 +161,135 @@ header{
 }
 //header
 
+#cover_area{
+  text-align: center;
+  padding: 80px 0;
+  
+  //retina_bg
+  
+    background-image: url("../images/top/cover.jpg");
+    background-size: cover;
+    
+    @media screen and (-webkit-min-device-pixel-ratio:2),
+                      (min-resolution: 2dppx){
+                        background-image: url("../images/top/cover@2x.jpg");
+                      }
+}
+
+ @media(min-width: 551px){
+   text-align: left;
+   height: 420px;
+   padding: 0;
+   
+   img{
+     margin-top: 180px;
+     margin-left: 70px;
+   }
+ }
+ //min-width: 551px
+ 
+#service_area{
+  padding-top: 20px;
+  
+  @media (min-width: 551px){
+  padding-top: 30px;
+}
+//min-width: 551px
+
+.columns{
+  color: #626262;
+  
+  .service_title{
+    @include fontsize(18);
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  p{
+    @include fontsize(15);
+    margin-top: 10px;
+  }
+  
+  @media (min-width: 551px){
+    .service_title{
+      @include fontsize(16);
+    }
+    
+    p{
+      @include fontsize(13);
+    }
+  }
+  //min-width: 551px
+}
+// .columns
+}
+// #service_area
+
+#news_area{
+  background-color: $gray_blue;
+  
+  @media (min-width: 551px){
+    .container{
+      padding: 0px 10% 50px 10%;
+    }
+  }
+  //min-width: 551px
+  
+  .news_title{
+    text-align: center;
+    @include fontsize(26);
+    color: $blue1;
+    padding: 15px 0 10px 0;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+  
+  .news_lists{
+    li{
+      list-style: none;
+      @include fontsize(15);
+      
+      span{
+        color: $blue1;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 3px;
+      }
+    }
+    // li
+  }
+  //.news_lists
+  
+  @media (min-width: 551px){
+    .news_title{
+      text-align: center;
+      @include fontsize(22);
+      color: $blue1;
+      padding: 50px 0 41px 0;
+      letter-spacing: 0.2rem;
+    }
+    
+    .news_lists{
+      li{
+        list-style: none;
+        @include fontsize(14);
+        margin-bottom: 20px;
+        
+      span{
+        color: $blue1;
+        font-weight: bold;
+        display: inline;
+        margin-bottom: 0px;
+      }
+      }
+      //li
+    }
+    //.news_lists
+  }
+  //min-width: 551px
+}
+// #news_area
+
 #sub_cover{
   text-align: center;
   padding: 80px 0;
@@ -271,7 +400,7 @@ footer{
     margin: 0 auto;
   }
   
-  .foot navi{
+  .foot_navi{
     margin-top: 20px;
     
     li{
